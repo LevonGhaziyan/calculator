@@ -55,3 +55,8 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 0px;
 }
+#error{
+    color: red;
+    font-size: 50px;
+    font-weight: bold
+}

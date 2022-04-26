@@ -24,12 +24,18 @@ function f() {
     var ha = 0;
     var hb = 0;
     var hc = 0;
-    var ank1 = Number((document.getElementById('ank1').value) * Math.PI / 180);
-    var ank2 = Number((document.getElementById('ank2').value) * Math.PI / 180)
-    var ank3 = Number((document.getElementById('ank3').value) * Math.PI / 180);
-    var kox1 = Number(document.getElementById('kox1').value);
-    var kox2 = Number(document.getElementById('kox2').value);
-    var kox3 = Number(document.getElementById('kox3').value);
+    var ank1x = Number((document.getElementById('ank1').value) * Math.PI / 180);
+    var ank2x = Number((document.getElementById('ank2').value) * Math.PI / 180);
+    var ank3x = Number((document.getElementById('ank3').value) * Math.PI / 180);
+    var kox1x = Number(document.getElementById('kox1').value);
+    var kox2x = Number(document.getElementById('kox2').value);
+    var kox3x = Number(document.getElementById('kox3').value);
+    var ank1 = ank1x;
+    var ank2 = ank2x;
+    var ank3 = ank3x;
+    var kox1 = kox1x;
+    var kox2 = kox2x;
+    var kox3 = kox3x;
     if (ank1 != "" && kox1 != "" && kox3 != "") {
         S = yst_koxmi_ev_ankyan(kox1, kox3, ank1);
         kox2 = Math.sqrt(kox1 ** 2 + kox3 ** 2 - 2 * kox1 * kox3 * Math.cos(ank1))
@@ -131,7 +137,6 @@ function f() {
     }
     P = kox1 + kox2 + kox3
     p = P / 2
-    console.log(kox1 + kox2 + kox3)
     R = (kox1 * kox2 * kox3) / 4 / S
     r = S / P * 2
     ma = 0.5 * Math.sqrt(2 * (kox2 ** 2 + kox3 ** 2) - kox1 ** 2)
@@ -143,6 +148,10 @@ function f() {
     ha = 2 * S / kox1
     hb = 2 * S / kox2
     hc = 2 * S / kox3
+    if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || (ank1 + ank2 + ank3) != Math.PI || (ank1x !== "" && ank1 != ank1x) || (ank2x != "" && ank2 != ank2x) || (ank3x != "" && ank3 != ank3x) || (kox1x != "" && kox1 != kox1x) || (kox2x != "" && kox2 != kox2x) || (kox3x != "" && kox3 != kox3x)) {
+        document.getElementById("error").innerHTML = "Ներմուծված տվյալներում սխալ կա։"
+    }
+
 
     document.getElementById("S").innerHTML = "Մակերես - " + (Math.round(S * Math.pow(10, 2)) / Math.pow(10, 2))
     document.getElementById("kox1v").innerHTML = "Կողմ 1 - " + (Math.round(kox1 * Math.pow(10, 2)) / Math.pow(10, 2))
