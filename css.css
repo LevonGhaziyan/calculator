@@ -11,15 +11,14 @@
     height: 200px;
 }
 
-.wrap {
-    background-color: white;
-    margin: 5px;
-}
-
 .div2 {
     margin: 0px;
     border: 0px;
     background-color: red;
+    position: fixed;
+    bottom: 0px;
+    padding: 4px;
+    border-radius: 10px;
 }
 
 .img {
@@ -43,24 +42,9 @@
 .value {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 60px;
 }
 
-#kox1v {
-    color: blue;
-}
-
-#kox2v {
-    color: yellow;
-}
-
-#kox3v {
-    color: red;
-}
-.div2{
-    position: fixed;
-    bottom: 0px;
-    padding: 2px;
-}
 .input{
     margin: 5px;
 }
