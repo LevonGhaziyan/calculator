@@ -50,7 +50,7 @@ function f() {
         S = yst_koxmi_ev_ankyan(kox2, kox3, ank3);
         kox1 = Math.sqrt(kox3 ** 2 + kox2 ** 2 - 2 * kox3 * kox2 * Math.cos(ank3))
         ank2 = Math.asin(kox3 * Math.sin(ank3) / kox1)
-        ank1 = Math.PI - Math.sin(ank3) - ank2
+        ank1 = Math.PI - ank3 - ank2
     } else if (kox1 != "" && kox2 != "" && kox3 != "") {
         p = kox1 / 2 + kox2 / 2 + kox3 / 2
         S = Math.sqrt(p * (p - kox1) * (p - kox2) * (p - kox3));
@@ -148,7 +148,8 @@ function f() {
     ha = 2 * S / kox1
     hb = 2 * S / kox2
     hc = 2 * S / kox3
-    if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || (ank1 + ank2 + ank3) != Math.PI || (ank1x !== "" && ank1 != ank1x) || (ank2x != "" && ank2 != ank2x) || (ank3x != "" && ank3 != ank3x) || (kox1x != "" && kox1 != kox1x) || (kox2x != "" && kox2 != kox2x) || (kox3x != "" && kox3 != kox3x)) {
+
+    if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || (ank1 + ank2 + ank3) != Math.PI || (ank1x != 0 && ank1 != ank1x) || (ank2x != 0 && ank2 != ank2x) || (ank3x != 0 && ank3 != ank3x) || (kox1x != 0 && kox1 != kox1x) || (kox2x != 0 && kox2 != kox2x) || (kox3x != 0 && kox3 != kox3x)) {
         document.getElementById("error").innerHTML = "Ներմուծված տվյալներով եռանկյուն գոյություն չունի։"
 
         document.getElementById("S").innerHTML = ""
