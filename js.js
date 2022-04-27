@@ -149,7 +149,7 @@ function f() {
     hb = 2 * S / kox2
     hc = 2 * S / kox3
     if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || (ank1 + ank2 + ank3) != Math.PI || (ank1x !== "" && ank1 != ank1x) || (ank2x != "" && ank2 != ank2x) || (ank3x != "" && ank3 != ank3x) || (kox1x != "" && kox1 != kox1x) || (kox2x != "" && kox2 != kox2x) || (kox3x != "" && kox3 != kox3x)) {
-        document.getElementById("error").innerHTML = "Ներմուծված տվյալներում սխալ կա։"
+        document.getElementById("error").innerHTML = "Ներմուծված տվյալներով եռանկյուն գոյություն չունի։"  
     }
 
 
