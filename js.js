@@ -150,6 +150,27 @@ function f() {
     hc = 2 * S / kox3
     if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || (ank1 + ank2 + ank3) != Math.PI || (ank1x !== "" && ank1 != ank1x) || (ank2x != "" && ank2 != ank2x) || (ank3x != "" && ank3 != ank3x) || (kox1x != "" && kox1 != kox1x) || (kox2x != "" && kox2 != kox2x) || (kox3x != "" && kox3 != kox3x)) {
         document.getElementById("error").innerHTML = "Ներմուծված տվյալներով եռանկյուն գոյություն չունի։"
+
+        document.getElementById("S").innerHTML = ""
+        document.getElementById("kox1v").innerHTML = ""
+        document.getElementById("kox2v").innerHTML = ""
+        document.getElementById("kox3v").innerHTML = ""
+        document.getElementById("ank1v").innerHTML = ""
+        document.getElementById("ank2v").innerHTML = ""
+        document.getElementById("ank3v").innerHTML = ""
+        document.getElementById("P").innerHTML = ""
+        document.getElementById("r").innerHTML = ""
+        document.getElementById("R").innerHTML = ""
+        document.getElementById("ma").innerHTML = ""
+        document.getElementById("mb").innerHTML = ""
+        document.getElementById("mc").innerHTML = ""
+        document.getElementById("la").innerHTML = ""
+        document.getElementById("lb").innerHTML = ""
+        document.getElementById("lc").innerHTML = ""
+        document.getElementById("ha").innerHTML = ""
+        document.getElementById("hb").innerHTML = ""
+        document.getElementById("hc").innerHTML = ""
+
     } else {
 
 
