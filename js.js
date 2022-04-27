@@ -149,29 +149,30 @@ function f() {
     hb = 2 * S / kox2
     hc = 2 * S / kox3
     if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || (ank1 + ank2 + ank3) != Math.PI || (ank1x !== "" && ank1 != ank1x) || (ank2x != "" && ank2 != ank2x) || (ank3x != "" && ank3 != ank3x) || (kox1x != "" && kox1 != kox1x) || (kox2x != "" && kox2 != kox2x) || (kox3x != "" && kox3 != kox3x)) {
-        document.getElementById("error").innerHTML = "Ներմուծված տվյալներով եռանկյուն գոյություն չունի։"  
+        document.getElementById("error").innerHTML = "Ներմուծված տվյալներով եռանկյուն գոյություն չունի։"
+    } else {
+
+
+        document.getElementById("S").innerHTML = "Մակերես - " + (Math.round(S * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("kox1v").innerHTML = "Կողմ 1 - " + (Math.round(kox1 * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("kox2v").innerHTML = "Կողմ 2 - " + (Math.round(kox2 * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("kox3v").innerHTML = "Կողմ 3 - " + (Math.round(kox3 * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("ank1v").innerHTML = "Անկյուն 1 - " + (Math.round((ank1 * 180 / Math.PI) * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("ank2v").innerHTML = "Անկյուն 2 - " + (Math.round((ank2 * 180 / Math.PI) * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("ank3v").innerHTML = "Անկյուն 3 - " + (Math.round((ank3 * 180 / Math.PI) * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("P").innerHTML = "Պարագիծ - " + (Math.round(P * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("r").innerHTML = "Ներգծած շրջանագծի շառավիղ - " + (Math.round(r * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("R").innerHTML = "Արտագծսծ շրջանագծի շառավիղ - " + (Math.round(R * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("ma").innerHTML = "1֊ի կողմին տարած միջնագիծ ֊ " + (Math.round(ma * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("mb").innerHTML = "2֊րդ կողմին տարած միջնագիծ ֊ " + (Math.round(mb * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("mc").innerHTML = "3֊րդ կողմին տարած միջնագիծ ֊ " + (Math.round(mc * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("la").innerHTML = "1֊ի կողմին տարած կիսորդ ֊ " + (Math.round(la * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("lb").innerHTML = "2֊րդ կողմին տարած կիսորդ ֊ " + (Math.round(lb * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("lc").innerHTML = "3֊րդ կողմին տարած կիսորդ ֊ " + (Math.round(lc * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("ha").innerHTML = "1֊ի կողմին տարած բարձրություն ֊ " + (Math.round(ha * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("hb").innerHTML = "2֊րդ կողմին տարած բարձրություն ֊ " + (Math.round(hb * Math.pow(10, 2)) / Math.pow(10, 2))
+        document.getElementById("hc").innerHTML = "3֊րդ կողմին տարած բարձրություն ֊ " + (Math.round(hc * Math.pow(10, 2)) / Math.pow(10, 2))
     }
-
-
-    document.getElementById("S").innerHTML = "Մակերես - " + (Math.round(S * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("kox1v").innerHTML = "Կողմ 1 - " + (Math.round(kox1 * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("kox2v").innerHTML = "Կողմ 2 - " + (Math.round(kox2 * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("kox3v").innerHTML = "Կողմ 3 - " + (Math.round(kox3 * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("ank1v").innerHTML = "Անկյուն 1 - " + (Math.round((ank1 * 180 / Math.PI) * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("ank2v").innerHTML = "Անկյուն 2 - " + (Math.round((ank2 * 180 / Math.PI) * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("ank3v").innerHTML = "Անկյուն 3 - " + (Math.round((ank3 * 180 / Math.PI) * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("P").innerHTML = "Պարագիծ - " + (Math.round(P * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("r").innerHTML = "Ներգծած շրջանագծի շառավիղ - " + (Math.round(r * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("R").innerHTML = "Արտագծսծ շրջանագծի շառավիղ - " + (Math.round(R * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("ma").innerHTML = "1֊ի կողմին տարած միջնագիծ ֊ " + (Math.round(ma * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("mb").innerHTML = "2֊րդ կողմին տարած միջնագիծ ֊ " + (Math.round(mb * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("mc").innerHTML = "3֊րդ կողմին տարած միջնագիծ ֊ " + (Math.round(mc * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("la").innerHTML = "1֊ի կողմին տարած կիսորդ ֊ " + (Math.round(la * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("lb").innerHTML = "2֊րդ կողմին տարած կիսորդ ֊ " + (Math.round(lb * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("lc").innerHTML = "3֊րդ կողմին տարած կիսորդ ֊ " + (Math.round(lc * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("ha").innerHTML = "1֊ի կողմին տարած բարձրություն ֊ " + (Math.round(ha * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("hb").innerHTML = "2֊րդ կողմին տարած բարձրություն ֊ " + (Math.round(hb * Math.pow(10, 2)) / Math.pow(10, 2))
-    document.getElementById("hc").innerHTML = "3֊րդ կողմին տարած բարձրություն ֊ " + (Math.round(hc * Math.pow(10, 2)) / Math.pow(10, 2))
 }
 function yst_koxmi_ev_ankyan(kox1, kox2, ank) {
     var x = 0.5 * (kox1 * kox2) * (Math.sin(ank));
