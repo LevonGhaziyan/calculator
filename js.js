@@ -149,7 +149,7 @@ function f() {
     hb = 2 * S / kox2
     hc = 2 * S / kox3
 
-    if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || (ank1 + ank2 + ank3) != Math.PI || (ank1x != 0 && ank1 != ank1x) || (ank2x != 0 && ank2 != ank2x) || (ank3x != 0 && ank3 != ank3x) || (kox1x != 0 && kox1 != kox1x) || (kox2x != 0 && kox2 != kox2x) || (kox3x != 0 && kox3 != kox3x)) {
+    if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || ((ank1 + ank2 + ank3) < (Math.PI - 0.01) || (ank1 + ank2 + ank3) > (Math.PI + 0.01)) || (ank1x != 0 && ank1 != ank1x) || (ank2x != 0 && ank2 != ank2x) || (ank3x != 0 && ank3 != ank3x) || (kox1x != 0 && kox1 != kox1x) || (kox2x != 0 && kox2 != kox2x) || (kox3x != 0 && kox3 != kox3x)) {
         document.getElementById("error").innerHTML = "Ներմուծված տվյալներով եռանկյուն գոյություն չունի։"
 
         document.getElementById("S").innerHTML = ""
