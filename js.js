@@ -68,7 +68,7 @@ function f() {
         ank2 = Math.PI - ank1 - ank3
         kox2 = Math.sin(ank1) * kox1 / Math.sin(ank3)
     } else if (ank3 != "" && kox1 != "" && kox2 != "") {
-        ank1 = Math.asin(kox2 * Math.sin(3) / kox1)
+        ank1 = Math.asin(kox2 * Math.sin(ank3) / kox1)
         ank2 = Math.PI - ank3 - ank1
         S = yst_koxmi_ev_ankyan(kox2, kox1, ank2);
         kox3 = Math.sin(ank2) * kox2 / Math.sin(ank1)
@@ -83,7 +83,7 @@ function f() {
         ank2 = Math.PI - ank1 - ank3
         kox1 = Math.sin(ank3) * kox2 / Math.sin(ank1)
     } else if (ank2 != "" && kox2 != "" && kox3 != "") {
-        ank1 = (kox2 * Math.sin(ank2) / kox3)
+        ank1 = Math.asin(kox2 * Math.sin(ank2) / kox3)
         ank3 = Math.PI - ank2 - ank1
         S = yst_koxmi_ev_ankyan(kox2, kox3, ank3);
         kox1 = Math.sin(ank3) * kox2 / Math.sin(ank1)
@@ -144,12 +144,11 @@ function f() {
     mc = 0.5 * Math.sqrt(2 * (kox1 ** 2 + kox2 ** 2) - kox3 ** 2)
     la = 2 / (kox2 + kox3) * Math.sqrt(kox2 * kox3 * p * (p - kox1))
     lb = 2 / (kox1 + kox3) * Math.sqrt(kox1 * kox3 * p * (p - kox2))
-    lc = 2 / (kox1 + kox2) * Math.sqrt(kox2 * kox1 * p * (p - kox3))
+    lc = 2 / (kox1 + kox2) * Math.sqrt(kox1 * kox2 * p * (p - kox3))
     ha = 2 * S / kox1
     hb = 2 * S / kox2
     hc = 2 * S / kox3
-
-    if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || ((ank1 + ank2 + ank3) < (Math.PI - 0.01) || (ank1 + ank2 + ank3) > (Math.PI + 0.01)) || (ank1x != 0 && ank1 != ank1x) || (ank2x != 0 && ank2 != ank2x) || (ank3x != 0 && ank3 != ank3x) || (kox1x != 0 && kox1 != kox1x) || (kox2x != 0 && kox2 != kox2x) || (kox3x != 0 && kox3 != kox3x)) {
+    if (isNaN(kox1) || isNaN(kox2) || isNaN(kox3) || isNaN(ank1) || isNaN(ank2) || isNaN(ank3) || isNaN(r) || isNaN(R) || isNaN(S) || isNaN(P) || isNaN(ma) || isNaN(mb) || isNaN(mc) || isNaN(la) || isNaN(lb) || isNaN(lc) || isNaN(ha) || isNaN(hb) || isNaN(hc) || ((ank1 + ank2 + ank3) < (Math.PI - 0.01) || (ank1 + ank2 + ank3) > (Math.PI + 0.01)) || (ank1x != 0 && (ank1 < (ank1x - 0.0001) || ank1 > (ank1x + 0.0001))) || (ank2x != 0 && (ank2 < (ank2x - 0.0001) || ank2 > (ank2x + 0.0001))) || (ank3x != 0 && (ank3 < (ank3x - 0.0001) || ank3 > (ank3x + 0.0001))) || (kox1x != 0 && (kox1 < (kox1x - 0.0001) || kox1 > (kox1x + 0.0001))) || (kox2x != 0 && (kox2 < (kox2x - 0.0001) || kox2 > (kox2x + 0.0001))) || (kox3x != 0 && (kox3 < (kox3x - 0.0001) || kox3 > (kox3x + 0.0001)))) {
         document.getElementById("error").innerHTML = "Ներմուծված տվյալներով եռանկյուն գոյություն չունի։"
 
         document.getElementById("S").innerHTML = ""
